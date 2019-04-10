@@ -4,8 +4,9 @@ cd $CURDIR
 echo "Change workspace to $CURDIR=>" && pwd && whoami
 
 # 关闭VNC
-vncserver -kill :1
-# 修改VNC连接配置
+if [ -d ~/.vnc ]; then
+  vncserver -kill :1
+fi
 # 启动VNCServer
 vncserver
 
