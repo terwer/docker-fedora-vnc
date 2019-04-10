@@ -1,0 +1,14 @@
+version: '3'
+services:
+  docker-fedora-vnc:
+    stdin_open: true
+    tty: true
+    image: terwer/fedora:29
+    container_name: docker-fedora
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    ports:
+      - 22:22
+    volumes:
+      - ./home:/home/
