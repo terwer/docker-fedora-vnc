@@ -9,6 +9,8 @@ services:
       context: ./
       dockerfile: ./Dockerfile
     ports:
-      - 22:22
+      - 5901:5901
     volumes:
       - ./home:/home/
+      - ./root:/root/
+      - ./tmp/:/tmp/
