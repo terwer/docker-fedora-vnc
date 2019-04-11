@@ -4,7 +4,7 @@ cd $CURDIR
 echo "Change workspace to $CURDIR=>" && pwd && whoami
 
 # 安装工作套件
-dnf install @developer-workstation-environment -y
+# dnf install @developer-workstation-environment -y
 
 # 关闭VNC
 chmod 777 /tmp
