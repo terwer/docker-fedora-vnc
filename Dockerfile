@@ -16,7 +16,6 @@ RUN rm -rf /etc/yum.repos.d/* \
     && dnf clean all \
     && dnf makecache \
 && echo "mirror set finished." \
-# 设置root密码 
 && dnf install passwd -y \
 && echo "package install finished." 
 
@@ -24,7 +23,7 @@ RUN rm -rf /etc/yum.repos.d/* \
 RUN useradd -m -g root terwer \
     && echo "$USER:123456" | chpasswd
 
-# 安装mate-desktop、VNC
+# 安装xfce-desktop、VNC
 RUN dnf groupinstall -y "Xfce Desktop" \
     && dnf install @developer-workstation-environment -y \
     && dnf install tigervnc-server -y
