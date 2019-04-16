@@ -17,6 +17,7 @@ RUN rm -rf /etc/yum.repos.d/fedora* \
     && dnf makecache \
 && echo "mirror set finished." \
 && dnf install passwd -y \
+&& dnf install wget -y \
 && echo "package install finished." 
 
 # 安装xfce-desktop、VNC
