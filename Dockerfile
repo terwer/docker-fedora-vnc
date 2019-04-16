@@ -10,7 +10,7 @@ ENV LANG=C.UTF-8 \
     USER=terwer
 
 # 添加网易源
-RUN rm -rf /etc/yum.repos.d/* \
+RUN rm -rf /etc/yum.repos.d/fedora* \
     && curl -o /etc/yum.repos.d/fedora.repo http://mirrors.163.com/.help/fedora-163.repo \
     && curl -o /etc/yum.repos.d/fedora-updates.repo http://mirrors.163.com/.help/fedora-updates-163.repo \
     && dnf clean all \
