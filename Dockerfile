@@ -25,7 +25,8 @@ RUN useradd -m -g root terwer \
     && echo "$USER:123456" | chpasswd
 
 # 安装mate-desktop、VNC
-RUN dnf install @mate-desktop-environment -y --allowerasing \
+RUN dnf groupinstall -y "Xfce Desktop" \
+    && dnf install @developer-workstation-environment -y \
     && dnf install tigervnc-server -y
 
 # 容器入口
