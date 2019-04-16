@@ -19,10 +19,6 @@ RUN rm -rf /etc/yum.repos.d/* \
 && dnf install passwd -y \
 && echo "package install finished." 
 
-# 创建用户
-RUN useradd -m -g root terwer \
-    && echo "$USER:123456" | chpasswd
-
 # 安装xfce-desktop、VNC
 RUN dnf groupinstall -y "Xfce Desktop" \
     && dnf install @developer-workstation-environment -y \
