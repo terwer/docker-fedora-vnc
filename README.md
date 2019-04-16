@@ -1,2 +1,2 @@
-# docker-fedora-mate-vnc
-Docker buid for fedora with vnc and mate desktop
+# docker-fedora-vnc
+Docker buid for fedora with vnc
